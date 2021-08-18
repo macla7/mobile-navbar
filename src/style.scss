@@ -1,0 +1,66 @@
+@import "scss/reset.scss";
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hamburger {
+  width: 1.5rem;
+  height: 2px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.mobile-nav-ul {
+  display: grid;
+  grid-gap: 0.1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  top: calc(100vh - 3rem);
+  position: fixed;
+  width: 100vw;
+  height: 3rem;
+  background-color: rgba(130, 130, 130, 0.1);
+
+  li {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    align-items: center;
+    border-top: 2px solid rgba(100, 100, 100, 0.3);
+  }
+
+  .nav-symbol {
+    display: grid;
+    justify-items: center;
+    font-size: 1.2rem;
+  }
+
+  .active {
+    border-top: 2px solid rgb(33, 174, 84);
+  }
+}
+
+.extra-navs {
+  position: absolute;
+  bottom: 3rem;
+  width: 100vw;
+  height: calc(100vh - 3rem);
+
+  .extra-nav-item {
+    background-color: rgba(130, 130, 130, 0.1);
+    border: 1px solid rgba(80, 80, 80, 0.3);
+    border-radius: 0.2rem;
+
+    padding: 2rem;
+    margin: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+  }
+}
+
+.hide {
+  display: none;
+}
